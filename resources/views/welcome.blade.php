@@ -25,6 +25,9 @@
                 + Add
             </button></a>
         </div>
+         @if(session('success'))
+            <h2 class="text-green-600">{{session('success')}}</h2>
+            @endif
     </div>
 </body>
 </html>

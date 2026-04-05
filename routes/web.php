@@ -6,9 +6,12 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/create', [PostController::class, 'create']);
+
+Route::post('/store', [PostController::class, 'fileStore'])->name('store');
+
 
 // Route::middleware(['auth'])->group(function () {
 //     Route::get('dashboard', function () {
